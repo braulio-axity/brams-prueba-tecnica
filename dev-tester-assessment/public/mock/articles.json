@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Introducción a Testing en React",
+    "image": "https://picsum.photos/seed/react/400/300",
+    "summary": "Buenas prácticas para comenzar con pruebas unitarias en componentes React."
+  },
+  {
+    "id": "2",
+    "title": "Patrones de Componentes",
+    "image": "https://picsum.photos/seed/patterns/400/300",
+    "summary": "Cómo estructurar componentes reutilizables y testeables."
+  },
+  {
+    "id": "3",
+    "title": "Cypress E2E Básico",
+    "image": "https://picsum.photos/seed/cypress/400/300",
+    "summary": "Primeros pasos para validar flujos completos de usuario con Cypress."
+  },
+  {
+    "id": "4",
+    "title": "RTL vs Enzyme",
+    "image": "https://picsum.photos/seed/rtl/400/300",
+    "summary": "Diferencias y cuándo usar cada librería de pruebas."
+  },
+  {
+    "id": "5",
+    "title": "Mocking de Fetch",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "Estrategias para simular llamadas a APIs en tus tests."
+  },
+  {
+    "id": "6",
+    "title": "Vite y Jest",
+    "image": "https://picsum.photos/seed/vite/400/300",
+    "summary": "Configurando un entorno rápido de desarrollo y pruebas."
+  }
+]
