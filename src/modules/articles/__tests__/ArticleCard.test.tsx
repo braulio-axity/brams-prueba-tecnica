@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import { ArticleCard } from '../../articles/components/ArticleCard'
-import type { Article } from '../../articles/types'
+import { ArticleCard } from '../components/ArticleCard'
+import type { Article } from '../types'
 
 const mockArticle: Article = {
   id: '1',
