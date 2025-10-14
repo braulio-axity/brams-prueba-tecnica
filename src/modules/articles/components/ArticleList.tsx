@@ -1,23 +1,28 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import type { Article } from '../types'
 import { ArticleCard } from './ArticleCard'
+import { usePageSize } from '../../../utils/hooks/usePageSize'
 
-type Props = {
-  items: Article[]
-  pageSize?: number
-}
+type Props = { items: Article[] }
 
-export function ArticleList({ items, pageSize = 5 }: Props) {
+export function ArticleList({ items }: Props) {
+  const pageSize = usePageSize() // Cambio para evitar props drilling y de paso dejar responsabilidades especificas en cada componente ---Mejora---
   const [page, setPage] = useState(1)
 
   const totalPages = useMemo(
     () => Math.max(1, Math.ceil(items.length / pageSize)),
     [items.length, pageSize]
   )
+
   const pageItems = useMemo(() => {
     const start = (page - 1) * pageSize
     return items.slice(start, start + pageSize)
   }, [items, page, pageSize])
+
+  // Asignacion estado cuando cambian items o pageSize ---Mejora---
+  useEffect(() => {
+    setPage((p) => Math.min(totalPages, Math.max(1, p)))
+  }, [totalPages])
 
   const goTo = (p: number) => setPage(Math.min(totalPages, Math.max(1, p)))
 

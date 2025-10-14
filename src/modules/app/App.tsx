@@ -33,7 +33,7 @@ export function App() {
         <SearchBar value={query} onChange={setQuery} />
       </header>
       <main>
-        <ArticleList items={filtered} pageSize={5} />
+        <ArticleList items={filtered} />
       </main>
     </div>
   )
