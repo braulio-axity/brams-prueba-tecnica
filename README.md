@@ -23,7 +23,7 @@ Tu objetivo es asegurar la calidad de los componentes y flujos clave implementan
 
 ## Qué debes hacer
 
-1. Pruebas unitarias e integración (Jest + RTL):
+1. Crear pruebas unitarias e integración (Jest + RTL):
    - Cubre los componentes `ArticleCard`, `ArticleList` y `SearchBar`.
    - Valida render, props, interacciones y estados (vacío, error si lo agregas, etc.).
 2. Prueba E2E (Cypress) / Deseable no Excluyente:
@@ -32,11 +32,13 @@ Tu objetivo es asegurar la calidad de los componentes y flujos clave implementan
    - Valida la navegación entre páginas (paginación) si aplica para el dataset.
 3. Análisis de diseño:
    - Revisa el diseño en Figma y documenta al menos dos diferencias visuales observadas entre la UI renderizada y el diseño.
-   - Placeholder: https://www.figma.com/file/XXXXXXXX/dev-tester-assessment
+   - Placeholder: https://www.figma.com/design/57tKDYPYvBlMp4AGjloNFq/Dev-Tester-Test?node-id=0-1&t=fxFXpexFDtUMtlx0-1
 4. Cobertura:
    - Genera reporte de cobertura de Jest y verifica que supere el 80% global.
 5. Documentación de pruebas:
-   - Documenta brevemente en este README los pasos de prueba realizados y hallazgos relevantes (bugs, riesgos, mejoras sugeridas).
+   - Documentar en un archivo brevemente los pasos de prueba realizados y hallazgos relevantes (bugs, riesgos, mejoras sugeridas).
+6. Control de versiones:
+   - Usa git para guardar el avance de tu trabajo y solicita un pull request al finalizar.
 
 ## Scripts
 
@@ -65,6 +67,23 @@ Tu objetivo es asegurar la calidad de los componentes y flujos clave implementan
 - Correcto modelado de flujos E2E (estabilidad, selectors, esperas razonables).
 - Lectura y comprensión de requisitos; documentación en este README.
 - Organización del código y estandarización con ESLint/Prettier.
+
+## Control de versiones
+
+Este proyecto se encuentra en un repositorio público de GitHub. Para contribuir, sigue estos pasos:
+
+1. **Fork del Repositorio**: Haz un fork del repositorio a tu cuenta de GitHub.
+2. **Clona tu Fork**: Clona tu fork en tu máquina local usando:
+   ```bash
+   git clone https://github.com/angelhurst/prueba-tecnica
+   ```
+3. **Crea una Nueva Rama desde `Dev-tester`**: Asegúrate de estar en la rama `Dev-tester` antes de crear tu rama de trabajo:
+   ```bash
+   git checkout Dev-tester
+   git checkout -b nombre-de-tu-rama
+   ```
+4. **Realiza tus Cambios**: Haz los cambios necesarios y realiza commits con mensajes descriptivos.
+5. **Envía un Pull Request**: Una vez que hayas terminado, envía un pull request desde tu fork al repositorio original.
 
 ## Notas
 
