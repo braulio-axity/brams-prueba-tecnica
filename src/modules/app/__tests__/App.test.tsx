@@ -63,7 +63,6 @@ describe('<App />', () => {
   it('filtra por query; `trim()` evita que espacios vacíos filtren todo', async () => {
     render(<App />);
 
-    // Avanza setTimeout(200) y vuelve a timers reales ANTES de waitFor/userEvent
     jest.useFakeTimers();
     await act(async () => {
       jest.advanceTimersByTime(200);
