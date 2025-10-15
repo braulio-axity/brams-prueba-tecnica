@@ -34,5 +34,83 @@
     "title": "Vite y Jest",
     "image": "https://picsum.photos/seed/vite/400/300",
     "summary": "Configurando un entorno rápido de desarrollo y pruebas."
+  },
+  {
+    "id": "7",
+    "title": "RTL vs Enzyme",
+    "image": "https://picsum.photos/seed/rtl/400/300",
+    "summary": "Diferencias y cuándo usar cada librería de pruebas."
+  },
+  {
+    "id": "8",
+    "title": "Mocking de Fetch",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "Estrategias para simular llamadas a APIs en tus tests."
+  },
+  {
+    "id": "9",
+    "title": "Vite y Jest",
+    "image": "https://picsum.photos/seed/vite/400/300",
+    "summary": "Configurando un entorno rápido de desarrollo y pruebas."
+  },
+  {
+    "id": "10",
+    "title": "Playwright",
+    "image": "https://picsum.photos/seed/react/400/300",
+    "summary": "E2E estable"
+  },
+  {
+    "id": "11",
+    "title": "Vitest vs Jest",
+    "image": "https://picsum.photos/seed/patterns/400/300",
+    "summary": "Pros y contras"
+  },
+  {
+    "id": "12",
+    "title": "Accesibilidad",
+    "image": "https://picsum.photos/seed/cypress/400/300",
+    "summary": "A11y en React"
+  },
+  {
+    "id": "13",
+    "title": "Prisma",
+    "image": "https://picsum.photos/seed/rtl/400/300",
+    "summary": "Migrations y seeds"
+  },
+  {
+    "id": "14",
+    "title": "k6",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "Carga y performance"
+  },
+  {
+    "id": "15",
+    "title": "Playwright",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "E2E estable"
+  },
+  {
+    "id": "16",
+    "title": "Vitest vs Jest",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "Pros y contras"
+  },
+  {
+    "id": "17",
+    "title": "Accesibilidad",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "A11y en React"
+  },
+  {
+    "id": "18",
+    "title": "Prisma",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "Migrations y seeds"
+  },
+  {
+    "id": "19",
+    "title": "k6",
+    "image": "https://picsum.photos/seed/fetch/400/300",
+    "summary": "Carga y performance"
   }
 ]

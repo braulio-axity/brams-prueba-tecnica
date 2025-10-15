@@ -1,39 +1,38 @@
+// test/setupTests.ts
 import '@testing-library/jest-dom';
 
 declare global {
   interface Window {
     __width?: number;
+    __setViewportWidth?: (w: number) => void;
   }
 }
 
-/**
- * Mock de matchMedia con un ancho "virtual" controlable.
- * Por defecto, 1280px (desktop).
- */
-function matchMediaMock(query: string) {
+function matchMediaMock(query: string): MediaQueryList {
   const width = window.__width ?? 1280;
-
   const min = /min-width:\s*(\d+)px/.exec(query);
   const max = /max-width:\s*(\d+)px/.exec(query);
-
   let matches = true;
   if (min) matches = matches && width >= Number(min[1]);
   if (max) matches = matches && width <= Number(max[1]);
-
-  const mql: MediaQueryList = {
+  return {
     media: query,
     matches,
     onchange: null,
     addEventListener: () => {},
     removeEventListener: () => {},
-    addListener: () => {},    // legacy (jsdom)
-    removeListener: () => {}, // legacy
+    addListener: () => {},
+    removeListener: () => {},
     dispatchEvent: () => true,
   } as any;
-
-  return mql;
 }
 
-if (!window.matchMedia) {
-  window.matchMedia = (q: string) => matchMediaMock(q);
-}
+// ⚠️ Sobrescribe SIEMPRE:
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (q: string) => matchMediaMock(q),
+});
+
+window.__setViewportWidth = (w: number) => {
+  window.__width = w;
+};

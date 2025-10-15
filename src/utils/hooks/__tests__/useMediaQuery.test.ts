@@ -23,7 +23,7 @@ describe('useMediaQuery', () => {
       matches: _matches,
       addEventListener: (_evt: 'change', cb: any) => listeners.add(cb),
       removeEventListener: (_evt: 'change', cb: any) => listeners.delete(cb),
-      addListener: () => {}, // legacy
+      addListener: () => {},
       removeListener: () => {},
       onchange: null,
       dispatchEvent: () => true,
