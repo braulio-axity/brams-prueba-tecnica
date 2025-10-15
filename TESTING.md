@@ -1,4 +1,4 @@
-# TESTING
+# Documento de prueba para sistema “prueba-técnica”
 
 ## Índice
 - [Stack y alcance](#stack-y-alcance)
@@ -12,7 +12,7 @@
 ---
 
 ## Stack y alcance
-**Objetivo:** validar calidad funcional, accesibilidad básica y estabilidad UI.
+**Objetivo:** Tu objetivo es asegurar la calidad de los componentes y flujos clave implementando pruebas automatizadas.
 **Tecnologías:**
 - Unit/Integration: **Jest** + **React Testing Library** (+ `@testing-library/jest-dom`)
 - E2E: **Cypress** (+ `@testing-library/cypress`)
@@ -53,22 +53,12 @@ npm run cy:open
 npm run cy:run
 ```
 ## Análisis visual (Figma vs UI)
+**Diferencias observadas**
 
-**Capturas** (guardar en `docs/img/`):
 - Figma:  
-  ![Figma - listado](./docs/img/figma-list.png "Figma - Listado")
+  ![Figma - listado](./docs/img/figma-design.png "1.- En la versión mobile el diseño muestra que debe haber un margen entre el componente que contiene las card los bordes del dispositivo y en la implementación se puede ver que no existe aquel margen ya que va de borde a borde.")
 - UI real:  
-  ![UI - listado](./docs/img/ui-list.png "UI - Listado")
-
-**Diferencias observadas (y acciones):**
-- **Grid (desktop)**: Figma propone 4 columnas con gutter amplio → UI ajustada con `grid-cols-4 gap-6/7`.
-- **Tipografías**: H1 `text-3xl font-bold`, títulos `text-lg font-semibold` para respetar jerarquía.
-- **Tarjeta**: imagen con `aspect-[16/9] object-cover rounded-t-xl`; resumen `line-clamp-2` para alturas consistentes.
-- **Paginación**: estados `disabled` claros (`opacity-50 cursor-not-allowed`), controles centrados.
-
-> Si se requiere paridad exacta (p. ej., 5 por página en desktop), fijar `usePageSize` y alinear tests (unit/E2E).
-
----
+  ![UI - listado](./docs/img/figma-design2.png "2.- En el diseño mobile también se asigna un ”divider” (<HR />) que en la implementación no sale.")
 
 ## Decisiones de diseño de pruebas
 
