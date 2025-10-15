@@ -1,0 +1,22 @@
+[
+    { "id": "1", "title": "React Tips",        "image": "a.jpg", "summary": "Testing Library y buenas prácticas" },
+    { "id": "2", "title": "NestJS Intro",      "image": "b.jpg", "summary": "Controllers y Providers" },
+    { "id": "3", "title": "Playwright",        "image": "c.jpg", "summary": "E2E estable" },
+    { "id": "4", "title": "Vitest vs Jest",    "image": "d.jpg", "summary": "Pros y contras" },
+    { "id": "5", "title": "Accesibilidad",     "image": "e.jpg", "summary": "A11y en React" },
+    { "id": "6", "title": "Prisma",            "image": "f.jpg", "summary": "Migrations y seeds" },
+    { "id": "7", "title": "k6",                "image": "g.jpg", "summary": "Carga y performance" },
+    { "id": "8", "title": "React Tips",        "image": "a.jpg", "summary": "Testing Library y buenas prácticas" },
+    { "id": "9", "title": "NestJS Intro",      "image": "b.jpg", "summary": "Controllers y Providers" },
+    { "id": "10", "title": "Playwright",        "image": "c.jpg", "summary": "E2E estable" },
+    { "id": "11", "title": "Vitest vs Jest",    "image": "d.jpg", "summary": "Pros y contras" },
+    { "id": "12", "title": "Accesibilidad",     "image": "e.jpg", "summary": "A11y en React" },
+    { "id": "13", "title": "Prisma",            "image": "f.jpg", "summary": "Migrations y seeds" },
+    { "id": "14", "title": "k6",                "image": "g.jpg", "summary": "Carga y performance" },
+    { "id": "15", "title": "Playwright",        "image": "c.jpg", "summary": "E2E estable" },
+    { "id": "16", "title": "Vitest vs Jest",    "image": "d.jpg", "summary": "Pros y contras" },
+    { "id": "17", "title": "Accesibilidad",     "image": "e.jpg", "summary": "A11y en React" },
+    { "id": "18", "title": "Prisma",            "image": "f.jpg", "summary": "Migrations y seeds" },
+    { "id": "19", "title": "k6",                "image": "g.jpg", "summary": "Carga y performance" }
+  ]
+  

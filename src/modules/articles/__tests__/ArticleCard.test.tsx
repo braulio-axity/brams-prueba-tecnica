@@ -42,17 +42,13 @@ describe('<ArticleCard />', () => {
     };
     render(<ArticleCard article={emptyArticle} />);
 
-    // El <img alt=""> NO tiene role="img"; es presentational.
-    // Opción A: localizar por alt vacío:
     const decorativeImg = screen.getByAltText('');
     expect(decorativeImg).toBeInTheDocument();
 
-    // El h3 existe pero sin nombre accesible
     const h3 = screen.getByRole('heading', { level: 3 });
     expect(h3).toBeInTheDocument();
     expect(h3).toHaveTextContent('');
 
-    // El párrafo existe y está vacío
     const p = screen.getByText('', { selector: 'p.card-summary' });
     expect(p).toBeInTheDocument();
     expect(p).toHaveTextContent('');

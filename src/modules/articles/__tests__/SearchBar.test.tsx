@@ -21,9 +21,9 @@ describe('<SearchBar />', () => {
     const input = screen.getByRole('textbox', { name: /buscar/i });
 
     await user.type(input, 'playwright');
-    expect(onChange).toHaveBeenCalled(); // se invoca por cada tecla
+    expect(onChange).toHaveBeenCalled();
 
-    // Simula controlado: el padre actualiza y volvemos a renderizar
+    // volvemos a renderiizar
     rerender(<SearchBar value="playwright" onChange={onChange} />);
     expect(screen.getByRole('textbox', { name: /buscar/i })).toHaveValue('playwright');
 
@@ -41,33 +41,36 @@ describe('<SearchBar />', () => {
     await user.click(clearBtn);
     expect(onChange).toHaveBeenCalledWith('');
 
-    // Simula que el padre aplica el cambio
+    // Simula que cambia el valor de entrada a "" no deberia verse el boton
     rerender(<SearchBar value="" onChange={onChange} />);
     expect(screen.queryByRole('button', { name: /clear/i })).not.toBeInTheDocument();
+
+     // Simula que cambia el valor de entrada a "holamundo" en este caso si deberia verse el boton
+     rerender(<SearchBar value="holamundo" onChange={onChange} />);
+     expect(screen.queryByRole('button', { name: /clear/i })).toBeInTheDocument();
   });
 
-  it('muestra el botón de limpiar cuando el valor es sólo espacios (no trimea por diseño actual)', async () => {
+  it('muestra el botón de limpiar cuando el valor es sólo espacios, no hay restriccion', async () => {
     const user = userEvent.setup();
     const onChange = jest.fn();
 
     const { rerender } = render(<SearchBar value="" onChange={onChange} />);
     const input = screen.getByRole('textbox', { name: /buscar/i });
 
-    await user.type(input, '   '); // tres espacios
-    // El padre setea "   " tal cual; simulamos el rerender controlado
+    await user.type(input, '   ');
     rerender(<SearchBar value={'   '} onChange={onChange} />);
 
     expect(screen.getByRole('textbox', { name: /buscar/i })).toHaveValue('   ');
-    // Sigue siendo truthy → debe existir el botón "Limpiar"
+    // el boton limpiar deberia verse
     expect(screen.getByRole('button', { name: /clear/i })).toBeInTheDocument();
   });
 
-  it('no interpreta HTML en el valor (XSS básico: se trata como texto)', () => {
+  it('no interpreta HTML en el valor (XSS básico)', () => {
     const payload = `<img src=x onerror=alert(1)>`;
     const onChange = jest.fn();
 
     const { rerender } = render(<SearchBar value="" onChange={onChange} />);
-    // Simulamos que el padre establece un valor "peligroso"
+    // Simulamos llega un valor "peligroso"
     rerender(<SearchBar value={payload} onChange={onChange} />);
 
     const input = screen.getByRole('textbox', { name: /buscar/i });

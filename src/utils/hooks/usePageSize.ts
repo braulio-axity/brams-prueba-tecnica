@@ -13,8 +13,8 @@ export function usePageSize() {
   const isTablet = useMediaQuery('(min-width: 640px)'); // si es true y no desktop => tablet
 
   return useMemo(() => {
-    if (isDesktop) return 6;
-    if (isTablet) return 4;
-    return 3; // mobile
+    if (isDesktop) return 12;
+    if (isTablet) return 8;
+    return 4; // mobile
   }, [isDesktop, isTablet]);
 }
