@@ -60,7 +60,7 @@ npm run cy:run
 
 - 1.- En la versión mobile el diseño muestra que debe haber un margen entre el componente que contiene las card los bordes del dispositivo y en la implementación se puede ver que no existe aquel margen ya que va de borde a borde.:  
   ![Figma - listado](./docs/img/figma-design.png "primera diferencia")
-- 2.- En el diseño mobile también se asigna un ”divider” (<HR />) que en la implementación no sale:  
+- 2.- En el diseño mobile también se asigna un ”divider” (HR) que en la implementación no sale:  
   ![UI - listado](./docs/img/figma-design2.png "segunda diferencia")
 
 **Estado actual**
@@ -83,7 +83,7 @@ npm run cy:run
 ## Algunos casos de pruebas
 
 - **Ingreso de caracteres especiales** Caso de prueba con ingreso de valores “escapados” no permitidos, como signos de mayor a o menos a.
-![UI - listado](./docs/img/casosSignos.png "escapados")
+![UI - listado](./docs/img/casoSignos.png "escapados")
 
 - **Caso revisión paginación.**: Donde la lista de artículos es mayor. 
 ![UI - listado](./docs/img/masItems.png "mas items")
