@@ -31,7 +31,7 @@ npm run test
 npm run test:coverage
 
 ## End-to-End (Cypress)
-
+```
 **Qué cubrimos:**
 - **article-list.cy.ts**
   - Carga inicial con intercept + fixture (`/mock/articles.json`).
@@ -46,10 +46,12 @@ npm run test:coverage
 
 **Ejecutar:**
 ```bash
-npm run dev      # levanta la app (ajusta puerto si aplica)
-npm run cy:open  # modo interactivo
-npm run cy:run   # headless
-
+npm run dev      
+npm run test      
+npm run test:coverage
+npm run cy:open 
+npm run cy:run
+```
 ## Análisis visual (Figma vs UI)
 
 **Capturas** (guardar en `docs/img/`):
